@@ -3,7 +3,8 @@
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "esModuleInterop": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable", "esnext"],
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -18,8 +19,24 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    // 路径配置
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*",
+        "src/api/*",
+        "src/components/*",
+        "src/layout/*",
+        "src/store/*",
+        "src/utils/*",
+        "src/views/*",
+        "src/assets/*"
+      ]
+    }
   },
+
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "exclude": []
 }

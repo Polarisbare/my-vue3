@@ -2,14 +2,27 @@
  * @Author: Lv Jingxin lv510987@163.com
  * @Date: 2023-07-12 16:13:49
  * @LastEditors: Lv Jingxin lv510987@163.com
- * @LastEditTime: 2023-07-12 17:45:28
+ * @LastEditTime: 2023-07-13 09:31:11
  * @FilePath: /my-vue-app/src/views/login/login.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <div class="container">我是登陆</div>
+  <div class="container">
+    <h1>登陆页面</h1>
+    <a-button
+      @click="
+        () =>
+          router.push({
+            path: '/',
+          })
+      "
+      >返回</a-button
+    >
+  </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const router = useRouter();
+</script>
 
 <style lang="less" scoped></style>

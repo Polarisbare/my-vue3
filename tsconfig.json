@@ -1,42 +1,70 @@
+// {
+//   "compilerOptions": {
+//     "target": "ES2020",
+//     "useDefineForClassFields": true,
+//     "module": "ESNext",
+//     "esModuleInterop": true,
+//     "lib": ["ES2020", "DOM", "DOM.Iterable", "esnext"],
+//     "skipLibCheck": true,
+
+//     /* Bundler mode */
+//     "moduleResolution": "bundler",
+//     "allowImportingTsExtensions": true,
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "noEmit": true,
+//     "jsx": "preserve",
+
+//     /* Linting */
+//     "strict": true,
+//     "noUnusedLocals": true,
+//     "noUnusedParameters": true,
+//     "noFallthroughCasesInSwitch": true,
+//     // 路径配置
+//     "baseUrl": "./",
+//     "paths": {
+//       "@/*": [
+//         "src/*",
+//         "src/api/*",
+//         "src/components/*",
+//         "src/layout/*",
+//         "src/store/*",
+//         "src/utils/*",
+//         "src/views/*",
+//         "src/assets/*"
+//       ]
+//     }
+//   },
+
+//   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "env.d.ts"],
+//   "references": [{ "path": "./tsconfig.node.json" }],
+//   "exclude": []
+// }
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "esnext",
+    "module": "esnext",
     "useDefineForClassFields": true,
-    "module": "ESNext",
-    "esModuleInterop": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable", "esnext"],
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
-
-    /* Linting */
+    "moduleResolution": "node",
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    // 路径配置
+    "jsx": "preserve",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
     "baseUrl": "./",
     "paths": {
-      "@/*": [
-        "src/*",
-        "src/api/*",
-        "src/components/*",
-        "src/layout/*",
-        "src/store/*",
-        "src/utils/*",
-        "src/views/*",
-        "src/assets/*"
-      ]
+      "@": ["src"],
+      "@/*": ["src/*"]
     }
   },
-
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }],
-  "exclude": []
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "*.ts"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

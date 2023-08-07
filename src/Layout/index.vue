@@ -2,7 +2,7 @@
  * @Author: Lv Jingxin lv510987@163.com
  * @Date: 2023-07-12 17:11:29
  * @LastEditors: Lv Jingxin lv510987@163.com
- * @LastEditTime: 2023-08-04 17:37:54
+ * @LastEditTime: 2023-08-07 10:51:43
  * @FilePath: /my-vue-app/src/views/Layout/index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -63,13 +63,13 @@
           </a-button>
         </a-layout-header>
         <a-layout style="padding: 0 24px">
-          <a-breadcrumb :style="{ margin: '16px 0' }">
+          <!-- <a-breadcrumb :style="{ margin: '16px 0' }">
             <a-breadcrumb-item>Home</a-breadcrumb-item>
             <a-breadcrumb-item>List</a-breadcrumb-item>
             <a-breadcrumb-item>App</a-breadcrumb-item>
-          </a-breadcrumb>
-          <a-layout-content>Content</a-layout-content>
-          <a-layout-footer>Footer</a-layout-footer>
+          </a-breadcrumb> -->
+          <a-layout-content>哈哈</a-layout-content>
+          <a-layout-footer>哈哈哈说</a-layout-footer>
         </a-layout>
       </a-layout>
     </a-layout>
@@ -77,7 +77,6 @@
 </template>
 
 <script lang="ts" setup>
-// import { defineComponent, ref } from "vue";
 import { Message } from "@arco-design/web-vue";
 import {
   IconCaretRight,

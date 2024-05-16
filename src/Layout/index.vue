@@ -2,7 +2,7 @@
  * @Author: Lv Jingxin lv510987@163.com
  * @Date: 2023-07-12 17:11:29
  * @LastEditors: Lv Jingxin lv510987@163.com
- * @LastEditTime: 2024-05-16 10:46:56
+ * @LastEditTime: 2024-05-16 14:12:08
  * @FilePath: /my-vue-app/src/views/Layout/index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -38,17 +38,9 @@
             <IconCaretLeft v-else />
           </a-button>
         </a-layout-header>
-        <!-- <a-layout style="padding: 0 24px">
-          <a-breadcrumb :style="{ margin: '16px 0' }">
-            <a-breadcrumb-item>Home</a-breadcrumb-item>
-            <a-breadcrumb-item>List</a-breadcrumb-item>
-            <a-breadcrumb-item>App</a-breadcrumb-item>
-          </a-breadcrumb>
-          <a-layout-content>
-            45
-          </a-layout-content>
-        </a-layout> -->
-        <router-view />
+        <a-layout-content>
+          <router-view />
+        </a-layout-content>
       </a-layout>
     </a-layout>
   </div>
@@ -109,15 +101,15 @@ const onClickMenuItem = (key: any) => {
     font-size: 14px;
     background: var(--color-bg-3);
   }
-  .layout-demo :deep(.arco-layout-footer),
-  .layout-demo :deep(.arco-layout-content) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: var(--color-white);
-    font-size: 16px;
-    font-stretch: condensed;
-    text-align: center;
-  }
+  // .layout-demo :deep(.arco-layout-footer),
+  // .layout-demo :deep(.arco-layout-content) {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   color: var(--color-white);
+  //   font-size: 16px;
+  //   font-stretch: condensed;
+  //   text-align: center;
+  // }
 }
 </style>

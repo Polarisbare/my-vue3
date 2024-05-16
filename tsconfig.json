@@ -46,6 +46,8 @@
     "module": "esnext",
     "useDefineForClassFields": true,
     "moduleResolution": "node",
+    "types": ["node", "minimist"],
+    "typeRoots": ["./node_modules/@types"],
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,

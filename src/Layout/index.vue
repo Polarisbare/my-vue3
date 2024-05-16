@@ -2,7 +2,7 @@
  * @Author: Lv Jingxin lv510987@163.com
  * @Date: 2023-07-12 17:11:29
  * @LastEditors: Lv Jingxin lv510987@163.com
- * @LastEditTime: 2023-08-07 10:51:43
+ * @LastEditTime: 2024-05-16 10:31:18
  * @FilePath: /my-vue-app/src/views/Layout/index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -29,30 +29,6 @@
             <IconCalendar />
             Menu 3
           </a-menu-item>
-          <a-sub-menu key="1">
-            <template #title>
-              <span><IconCalendar />Navigation 1</span>
-            </template>
-            <a-menu-item key="1_1">Menu 1</a-menu-item>
-            <a-menu-item key="1_2">Menu 2</a-menu-item>
-            <a-sub-menu key="2" title="Navigation 2">
-              <a-menu-item key="2_1">Menu 1</a-menu-item>
-              <a-menu-item key="2_2">Menu 2</a-menu-item>
-            </a-sub-menu>
-            <a-sub-menu key="3" title="Navigation 3">
-              <a-menu-item key="3_1">Menu 1</a-menu-item>
-              <a-menu-item key="3_2">Menu 2</a-menu-item>
-              <a-menu-item key="3_3">Menu 3</a-menu-item>
-            </a-sub-menu>
-          </a-sub-menu>
-          <a-sub-menu key="4">
-            <template #title>
-              <span><IconCalendar />Navigation 4</span>
-            </template>
-            <a-menu-item key="4_1">Menu 1</a-menu-item>
-            <a-menu-item key="4_2">Menu 2</a-menu-item>
-            <a-menu-item key="4_3">Menu 3</a-menu-item>
-          </a-sub-menu>
         </a-menu>
       </a-layout-sider>
       <a-layout>
@@ -62,15 +38,17 @@
             <IconCaretLeft v-else />
           </a-button>
         </a-layout-header>
-        <a-layout style="padding: 0 24px">
-          <!-- <a-breadcrumb :style="{ margin: '16px 0' }">
+        <!-- <a-layout style="padding: 0 24px">
+          <a-breadcrumb :style="{ margin: '16px 0' }">
             <a-breadcrumb-item>Home</a-breadcrumb-item>
             <a-breadcrumb-item>List</a-breadcrumb-item>
             <a-breadcrumb-item>App</a-breadcrumb-item>
-          </a-breadcrumb> -->
-          <a-layout-content>哈哈</a-layout-content>
-          <a-layout-footer>哈哈哈说</a-layout-footer>
-        </a-layout>
+          </a-breadcrumb>
+          <a-layout-content>
+            45
+          </a-layout-content>
+        </a-layout> -->
+        <router-view />
       </a-layout>
     </a-layout>
   </div>

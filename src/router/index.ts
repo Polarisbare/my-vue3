@@ -2,26 +2,25 @@
  * @Author: WangMaoqing 1035311011@qq.com
  * @Date: 2023-01-16 18:12:51
  * @LastEditors: Lv Jingxin lv510987@163.com
- * @LastEditTime: 2024-05-16 10:36:10
+ * @LastEditTime: 2024-05-16 10:47:48
  * @FilePath: /lesson_preparation/src/router/index.ts
  * @Description: 路由根文件。在引入各模块的路由，并加入到路由配置中。
  */
 
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import test from "./modules/test";
-// import common from "./modules/common";
-// import home from "./modules/home";
+import home from "./modules/home";
 import Layout from "@/Layout/index.vue";
-import Home from "@/views/Home/home.vue";
 import Login from "@/views/Login/login.vue";
 
 // 配一个常量的路由，放不用权限控制的,例如登录页、首页、404等页面
 export const constantRoutes: RouteRecordRaw[] = [
   {
     path: "/",
-    name: "home",
-    component: Home,
+    name: "Layout",
+    component: Layout,
     children: [
+      ...home,
       ...test,
       {
         path: "/:pathMatch(.*)",

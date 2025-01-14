@@ -44,9 +44,10 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
+    "noEmit": true,
     "useDefineForClassFields": true,
     "moduleResolution": "node",
-    "types": ["node", "minimist"],
+    "types": ["node"],
     "typeRoots": ["./node_modules/@types"],
     "strict": true,
     "jsx": "preserve",
@@ -66,7 +67,7 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "*.ts"
+    "env.d.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

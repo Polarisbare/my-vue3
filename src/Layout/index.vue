@@ -2,7 +2,7 @@
  * @Author: Lv Jingxin lv510987@163.com
  * @Date: 2023-07-12 17:11:29
  * @LastEditors: Lv Jingxin lv510987@163.com
- * @LastEditTime: 2025-01-14 10:58:59
+ * @LastEditTime: 2025-01-14 11:04:56
  * @FilePath: /my-vue-app/src/views/Layout/index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -19,15 +19,15 @@
         >
           <a-menu-item key="0_1">
             <IconHome />
-            Menu 1
+            登陆
           </a-menu-item>
           <a-menu-item key="0_2">
             <IconCalendar />
-            Menu 2
+            home
           </a-menu-item>
           <a-menu-item key="0_3">
             <IconCalendar />
-            Menu 3
+            测试
           </a-menu-item>
         </a-menu>
       </a-layout-sider>
@@ -63,6 +63,8 @@ const onClickMenuItem = (key: any) => {
   } else if (key === "0_2") {
     router.push("/home");
   } else if (key === "0_3") {
+    router.push("/test");
+  } else {
     router.push("/404");
   }
 };

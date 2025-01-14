@@ -2,7 +2,7 @@
  * @Author: Lv Jingxin lv510987@163.com
  * @Date: 2023-07-12 17:11:29
  * @LastEditors: Lv Jingxin lv510987@163.com
- * @LastEditTime: 2024-05-16 14:12:08
+ * @LastEditTime: 2025-01-14 10:58:59
  * @FilePath: /my-vue-app/src/views/Layout/index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -13,11 +13,11 @@
         <div class="logo" />
         <a-menu
           :default-open-keys="['1']"
-          :default-selected-keys="['0_3']"
+          :default-selected-keys="['0_2']"
           :style="{ width: '100%' }"
           @menu-item-click="onClickMenuItem"
         >
-          <a-menu-item key="0_1" disabled>
+          <a-menu-item key="0_1">
             <IconHome />
             Menu 1
           </a-menu-item>
@@ -48,13 +48,9 @@
 
 <script lang="ts" setup>
 import { Message } from "@arco-design/web-vue";
-import {
-  IconCaretRight,
-  IconCaretLeft,
-  IconHome,
-  IconCalendar,
-} from "@arco-design/web-vue/es/icon";
-
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
 const collapsed = ref(false);
 const onCollapse = () => {
   collapsed.value = !collapsed.value;
@@ -62,6 +58,13 @@ const onCollapse = () => {
 
 const onClickMenuItem = (key: any) => {
   Message.info({ content: `You select ${key}`, showIcon: true });
+  if (key === "0_1") {
+    router.push("/login");
+  } else if (key === "0_2") {
+    router.push("/home");
+  } else if (key === "0_3") {
+    router.push("/404");
+  }
 };
 </script>
 
@@ -101,15 +104,5 @@ const onClickMenuItem = (key: any) => {
     font-size: 14px;
     background: var(--color-bg-3);
   }
-  // .layout-demo :deep(.arco-layout-footer),
-  // .layout-demo :deep(.arco-layout-content) {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   color: var(--color-white);
-  //   font-size: 16px;
-  //   font-stretch: condensed;
-  //   text-align: center;
-  // }
 }
 </style>
